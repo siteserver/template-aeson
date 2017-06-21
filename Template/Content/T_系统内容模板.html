@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>{Stl.SiteName}-{Channel.Title}</title>
+  <link rel="stylesheet" href="{Stl.SiteUrl}/styles/base.css">
+  <link rel="stylesheet" href="{Stl.SiteUrl}/styles/second.css">
+  <style>
+     .newsCon p{ color: #000000;}
+  </style>
+</head>
+<body>
+<stl:include file="/include/header.html"></stl:include>
+<div class="bannerSecond">
+<stl:channel topLevel="1" type="ImageUrl" width="960" height="154"></stl:channel>
+</div>
+<div class="secondBox">
+  <h2 class="secondTitle"><span>{Channel.Title}</span></h2>
+  <div class="main">
+    <div class="newsCon">
+      <h3 class="ellipsis"><stl:content type="Title"></stl:content></h3>
+      <h4>来源：<stl:content type="Source"></stl:content>      发稿人：<stl:content type="Author"></stl:content>     发布时间：
+            <stl:content type="AddDate" formatString="yyyy-MM-dd"></stl:content></h4>
+      <stl:content type="Content"></stl:content>
+    </div>
+  </div>
+  <stl:include file="/include/right.html"></stl:include>  
+</div>
+<stl:include file="/include/footer.html"></stl:include>
+<script type="text/javascript" src="{Stl.SiteUrl}/scripts/lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="{Stl.SiteUrl}/scripts/page/mobile_nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<script type="text/javascript" src="{Stl.SiteUrl}/scripts/lib/jquery-1.11.3.min.js"></script>
+<div class="aside">
+    <div class="asideNav">
+      <h3>{channel.top2.Title}</h3>
+      <ul>
+            <stl:channels channelIndex="{channel.top1.Title}">
+            <stl:if testType="UpChannelOrSelf">
+                <stl:successTemplate>
+                <li><stl:a class="cur">{Channel.Title}</stl:a></li>
+                </stl:successTemplate>
+                <stl:failureTemplate>
+                <li><stl:a>{Channel.Title}</stl:a></li>
+                </stl:failureTemplate>
+            </stl:if>
+            </stl:channels>
+      </ul>    
+    </div>
+    <div class="suggest">
+      <h3>推荐内容</h3>
+            <stl:contents channelIndex="推荐内容"  totalNum="1" order="AddDate">
+      <div class="suggestImg"><stl:a target="_blank"><img src="{Content.ImageUrl}" width="274" height="119"><i></i></stl:a></div>
+      <p><stl:content type="Summary" wordNum="60" ellipsis="..."></stl:content>   <stl:a target="_blank">详细内容&gt;</stl:a></p>
+            </stl:contents>
+    </div>
+  </div>

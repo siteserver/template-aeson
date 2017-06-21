@@ -1,0 +1,62 @@
+.bannerSecond{ width:960px; margin:14px auto 0;}
+.bannerSecond img{ display:block; width:960px; height:154px;}
+
+.secondBox{ width:960px; margin:20px auto 0; overflow:hidden;}
+.secondBox .secondTitle{ height:18px; line-height:18px; background:url(../images/line_bg.png) repeat-x left center;}
+.secondBox .secondTitle span{ margin-left:23px; padding:0 13px; font-size:15px; background:#fff; color:#494949;}
+
+.secondBox .main{ width:670px; float:left; overflow:hidden;}
+.secondBox .aside{ width:284px; float:right; overflow:hidden;}
+.secondBox .aside h3{ font-size:16px; height:32px; line-height:32px; color:#000;}
+.secondBox .asideNav ul{ padding-top:7px; border-top:1px solid #c2c2c2; margin-top:3px;}
+.secondBox .asideNav li{ height:30px; line-height:30px; margin:0 3px; border-bottom:1px solid #efefef; padding-left:21px; background:url(../images/arrow_ico.png) no-repeat 7px center;}
+.secondBox .asideNav li a{ color:#585858; font-size:13px;}
+.secondBox .asideNav li a.cur{ color:#ea4822; text-decoration:none;}
+
+.secondBox .aside .suggest{ margin:40px 0;}
+.secondBox .suggest .suggestImg{ width:274px; height:119px; border-radius:2px; padding:4px; border:1px solid #f1f1f1; border-radius:2px; margin-bottom:10px; position:relative;}
+.secondBox .suggest .suggestImg i{ display:block; width:35px; height:35px; background:url(../images/aside_arrow.png) no-repeat; position:absolute; right:4px; bottom: 4px;}
+.secondBox .suggest .suggestImg img{ display:block; width:274px; height:119px; border-radius:2px; }
+.secondBox .suggest p{ color:#7b7b7b; line-height:24px; text-indent:2em; padding:0 8px;}
+.secondBox .suggest p a{ color:#188dc3}
+
+.partner{ padding:28px 0 0 4px; overflow:hidden;}
+.partner li{ float:left; width:148px; height:164px; text-align:center; color:#7e7e7e; margin-right:17px;}
+.partner li div{ display:block; width:144px; height:120px; padding:1px; background:#ececec; border:1px solid #f5f5f5; border-radius:2px; margin:0 auto 10px;}
+.partner li img{ display:block; width:144px; height:120px;}
+
+.newList { width:635px;}
+.newList li{ padding:19px 10px 17px; overflow:hidden;}
+.newList li.bg{ background:#f4f9fd; border-bottom:1px solid #dee8f3;}
+.newList li img{ display:block; float:left; width:171px; height:120px; float:left; margin-right:24px;}
+.newList li .newList_c{ overflow:hidden; *zoom:1;}
+.newList li .newList_c h3{ font-size:15px; color:#000; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; padding-bottom:10px;}
+.newList li .newList_c p{ font-size:13px; line-height:22px; color:#595959;}
+.newList li .more{ text-align:right;} 
+.newList li .more a{ color:#ea4822;}
+.newList .page{ padding:30px 0 50px;}
+
+.newsCon{ padding:20px 0 50px; width:635px; text-align:center;font-size:14px;}
+.newsCon h3{ font-size:17px; padding:10px 0; border-bottom:1px solid #d6d6d6;}
+.newsCon h4{ font-size:13px; color:#737373; padding:10px 0 15px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.newsCon img{ padding:5px; border:1px solid #e6e6e6; border-radius:3px;}
+.newsCon p{ text-align:left; text-indent:2em; line-height:22px; color:#909090; padding:10px 0;}
+
+@media screen and (max-width:540px) {
+	.secondBox{ padding:10px; width:auto; margin:0;}	
+	.secondBox .aside{ display:none;}	
+	.secondBox .main{ width:auto; float:none;}
+	.secondBox .main img{ display:block; width:100%; height:auto;}
+	
+	.bannerSecond{ width:100%; margin-top:10px;}
+	.bannerSecond img{ width:100%; height:auto;}
+	
+	.newsCon{ width:100%; padding:10px 0 0 0;}
+	.newsCon img{ padding:0; border:none;}
+	.newsCon h4{ font-size:12px;}
+	
+	.newList{ width:100%;}
+	.newList li{ padding:10px 0;}
+	.secondBox .main .newList li img{ display:none;}
+	.newList .page{ padding:20px 0;}
+}

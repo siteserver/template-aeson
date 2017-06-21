@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>{Stl.SiteName}</title>
+  <link rel="stylesheet" href="{Stl.SiteUrl}/styles/base.css">
+  <link rel="stylesheet" href="{Stl.SiteUrl}/styles/index.css">
+  <style>
+    .prodList li img{height:230px;}
+    .prodList .prodInsBox .mask{height:230px;}
+    .prodList .prodInsBox p{height:120px; text-align: justify;}
+    .prodList .prodCon h3 a{ font-size:18px;}
+    .ellipsis{font-size:14px;}
+    .header .nav td ul{ width:145px; right:-20px;}
+    .slogan img{width:960px;height:60px;}
+    .slogan a{width:960px;height:60px;}
+    .slogan{height:60px;}
+    .indexBox{overflow: visible;}
+  </style>
+</head>
+<body>
+<stl:include file="/include/header.html"></stl:include>
+
+<div class="banner">
+  <ul>
+    <stl:contents channelIndex="首页焦点" isImage="true">
+    <stl:if testType="ItemIndex" testOperate="Equals" testValue="1">
+    <stl:successTemplate>
+    <li class="cur" style="background-image:url({Content.ImageUrl});">
+      <div class="bannerBox">
+        <div class="bannerMsg">
+          <div class="mask"></div>
+          <div class="bannerCon">
+            <h2><stl:content type="Title" wordNum="14" ellipsis=""></stl:content></h2>
+            <p><stl:content type="Summary" wordNum="110" ellipsis=""></stl:content></p>
+            <stl:a>Learn More</stl:a>
+          </div>
+        </div>
+      </div>
+    </li>
+    </stl:successTemplate>
+    <stl:failureTemplate>
+    <li style="background-image:url({Content.ImageUrl});">
+      <div class="bannerBox">
+        <div class="bannerMsg">
+          <div class="mask"></div>
+          <div class="bannerCon">
+            <h2><stl:content type="Title" wordNum="14" ellipsis=""></stl:content></h2>
+            <p><stl:content type="Summary" wordNum="110" ellipsis=""></stl:content></p>
+            <stl:a>Learn More</stl:a>
+          </div>
+        </div>
+      </div>
+    </li>
+    </stl:failureTemplate>
+      </stl:if>
+  </stl:contents>
+  </ul>
+  <div class="nums">
+      <stl:contents channelIndex="首页焦点" isImage="true">
+        <stl:if testType="ItemIndex" testOperate="Equals" testValue="1">
+        <stl:successTemplate>
+          <a class="cur" href="javascript:void(0);">{Content.ItemIndex}</a>
+        </stl:successTemplate>
+        <stl:failureTemplate>
+          <a href="javascript:void(0);">{Content.ItemIndex}</a>
+        </stl:failureTemplate>
+        </stl:if>
+      </stl:contents>
+  </div>
+  <a href="javascript:void(0);" class="leftBtn"></a>
+  <a href="javascript:void(0);" class="rightBtn"></a>
+</div>
+
+<div class="prod">
+  <h2 class="indexTitle"><span><stl:a channelIndex="主营业务" style="color:#494949;" target="_blank">产品与服务</stl:a></span></h2>
+  
+
+  <p class="ins" style="text-align:center;">
+  <stl:channel channelIndex="产品与服务" isClearTags="true" type="Content" wordNum="90"></stl:channel>
+  </p>
+
+  
+  <ul class="prodList">
+    
+        <stl:contents channelIndex="主营业务" scope="All" totalNum="1" isImage="true" startNum="1" order="AddDate">
+        <li>
+      <div class="prodCon">
+        <div class="prodBox">
+          <img src="{Content.ImageUrl}" width="248" height="230">
+          <div class="prodInsBox">
+            <div class="mask"></div>
+            <div class="prodIns">
+               <h3 class="ellipsis"><stl:content type="Title" wordNum="14" ellipsis=""></stl:content></h3>
+                   <p><stl:content type="Summary" wordNum="85" ellipsis="..."></stl:content></p>  
+              <stl:a target="_blank">了解详情&gt;&gt;</stl:a>
+            </div>
+          </div>
+        </div>
+        <h3 class="ellipsis" style="padding: 63px 12px 8px;"><stl:a><stl:content type="Title" wordNum="11" ellipsis=""></stl:content></stl:a></h3>
+      </div>
+    </li>
+    </stl:contents>
+        
+        <stl:contents channelIndex="主营业务" scope="All" totalNum="1" isImage="true" startNum="2" order="AddDate">
+    <li>
+        
+      <div class="prodCon">
+        <div class="prodBox">
+           <img src="{Content.ImageUrl}" width="248" height="230">
+  
+          <div class="prodInsBox">
+            <div class="mask"></div>
+            <div class="prodIns">
+              <h3 class="ellipsis"><stl:content type="Title" wordNum="14" ellipsis=""></stl:content></h3>
+                  <p><stl:content type="Summary" wordNum="85" ellipsis="..."></stl:content></p>
+                            <stl:a target="_blank">了解详情&gt;&gt;</stl:a>
+            </div>
+          </div>
+        </div>
+         <h3 class="ellipsis" style="padding: 63px 12px 8px;"><stl:a><stl:content type="Title" wordNum="11" ellipsis=""></stl:content></stl:a></h3>
+      </div>
+    </li>
+        </stl:contents>
+        <stl:contents channelIndex="主营业务" scope="All" totalNum="1" isImage="true" startNum="3" order="AddDate">
+    <li class="last">
+        
+      <div class="prodCon">
+        <div class="prodBox">
+          <img src="{Content.ImageUrl}" width="248" height="230">
+          <div class="prodInsBox">
+            <div class="mask"></div>
+            <div class="prodIns">
+              <h3 class="ellipsis"><stl:content type="Title" wordNum="14" ellipsis=""></stl:content></h3>
+                  <p><stl:content type="Summary" wordNum="85" ellipsis="..."></stl:content></p>
+                            <stl:a target="_blank">了解详情&gt;&gt;</stl:a>  
+            </div>
+          </div>
+        </div>  
+         <h3 class="ellipsis" style="padding: 63px 12px 8px;"><stl:a><stl:content type="Title" wordNum="11" ellipsis=""></stl:content></stl:a></h3>
+           
+      </div>
+    </li>
+        </stl:contents>
+  </ul>
+</div>
+
+<div class="slogan">
+<stl:contents channelIndex="广告位" totalNum="1">
+  <stl:a target="_blank"><img src="{Content.ImageUrl}" width="960" height="60"></stl:a>
+</stl:contents>
+</div>
+
+<div class="indexBox">
+  <div class="indexBoxTitle"></div>
+  <div class="indexBoxCon clearfix">
+    <div class="activity">
+      <h3><span>
+      <stl:a channelIndex="展会活动" target="_blank" style="color:#767676;line-height: 50px;background: none;display: block;color: #767676;float: none;
+height: 23px;">展会活动</stl:a></span></h3>
+      <ul>
+            <stl:contents channelIndex="展会活动" scope="SelfAndChildren" totalNum="2" isRecommend="true" isImage="true" order="LastEditDate">
+        <li>
+          <stl:image type="ImageUrl" no="2" width="45" height="45"></stl:image>
+          <h4 class="ellipsis"><stl:content type="Title" wordNum="14" ellipsis=""></stl:content></h4>
+          <p><stl:content type="AddDate" formatString="yyyy-MM-dd"></stl:content></p> 
+          <div class="activity_con"><stl:content type="Summary" wordNum="50" ellipsis="..."></stl:content></div>
+          <stl:a target="_blank">详细内容</stl:a>
+        </li>
+            </stl:contents>
+        
+      </ul>
+    </div>
+    <i></i>
+    <div class="news">
+      <h3><span><stl:a channelIndex="迅驰新闻" target="_blank" style="color:#767676;">新闻中心</stl:a></span></h3>
+      <ul class="newlist">
+          <stl:contents channelIndex="迅驰新闻" scope="All" isImage="true" isRecommend="true" totalNum="2" order="LastEditDate">
+            <li>
+              <stl:a>
+                <img src="{Content.ImageUrl}" width="84" height="70">
+                <div class="newsCon">
+                  <h4 class="ellipsis"><stl:content type="Title" wordNum="12" ellipsis=""></stl:content></h4>
+                  <p><stl:content type="Content" isClearTags="true" wordNum="50" ellipsis="..."></stl:content></p>
+                </div>
+              </stl:a>
+            </li>
+          </stl:contents>
+      </ul>
+    </div>
+    <i></i>
+    <div class="words">
+      <h3><span><stl:a channelIndex="媒体报道" target="_blank" style="color:#767676;">媒体报道</stl:a></span></h3>
+      <ul>
+            <stl:contents channelIndex="媒体报道" totalNum="2" isImage="true" isRecommend="true" order="LastEditDate">
+        <li>
+                
+          <img src="{Content.ImageUrl}" width="49" height="44">
+          <div class="ceo">
+            
+            <strong><stl:a style="color:#188ec5;text-decoration: none;"><stl:content type="Title" wordNum="14" ellipsis=""></stl:content></stl:a></strong>
+                    <p><stl:content type="AddDate" formatString="yyyy-MM-dd"></stl:content></p></div>
+          <div class="ceoIns">
+            <h4 class="ellipsis"><stl:content type="Author"></stl:content></h4>
+            <p><stl:content type="SubTitle" wordNum="11" ellipsis=""></stl:content></p>
+          </div>
+          <p class="ceoWords">
+            <stl:a style="text-decoration: none;"><stl:content type="Summary" wordNum="40" ellipsis="..."></stl:content></stl:a>
+          </p>
+          <em></em>
+        </li>
+           </stl:contents>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<stl:include file="/include/footer.html"></stl:include>
+<script type="text/javascript" src="{Stl.SiteUrl}/scripts/lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="{Stl.SiteUrl}/scripts/page/banner.js"></script>
+<script type="text/javascript" src="{Stl.SiteUrl}/scripts/page/mobile_nav.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,96 @@
+.object{ width:951px; margin:20px auto;}
+
+.banner{ width:100%; height:365px; overflow:hidden; position:relative;}
+.banner ul{ width:100%; height:365px; position:relative;}
+.banner li{ width:100%; height:365px; background-repeat:no-repeat; background-position:center top; position:absolute; top:0; left:0; background-color:#000; display:none; border-radius:2px;}
+.banner li a{ display:block; width:100%; height:100%;}
+.banner li.cur{ z-index:1; display:block;}
+.banner .nums{ width:142px; height:66px; bottom:0; position:absolute; right:0; text-align:center; z-index:9; font-size:0;}
+.banner .nums a{ display:inline-block; margin:25px 4px 0; width:15px; height:15px; background:url(../images/zt_num.png) no-repeat; line-height:9999em; overflow:hidden;}
+.banner .nums .cur{ background:url(../images/zt_num_cur.png) no-repeat;}
+.banner .leftBtn{ display:block; width:37px; height:104px; background:url(../images/zt_pre.png) no-repeat; position:absolute; left:0; top:50%; margin-top:-50px; z-index:99;}
+.banner .rightBtn{ display:block; width:34px; height:104px; background:url(../images/zt_next.png) no-repeat; position:absolute; right:0; top:50%; margin-top:-50px; z-index:99;}
+.banner .mask{ width:100%; height:66px; background:#000; opacity:.7; filter:alpha(opacity=70); position:absolute; left:0; bottom:0; border-radius:0 0 2px 2px;}
+.banner p{ padding:0 200px 0 25px; height:66px; font-size:16px; color:#fff; line-height:66px; position:absolute; left:0; bottom:0; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+
+.object_ins{ background:url(../images/zt_bg.jpg) repeat-x #ebeff4; margin-top:10px; border-radius:3px; padding:10px 20px 10px 30px; overflow:hidden;}
+.object_ins h3{ font-size:17px; color:#2b2b2b; padding-bottom:10px;}
+.object_ins p{ color:#595959; font-size:13px; line-height:22px;}
+.object_ins .more{ float:right;}
+.object_ins .more a{ color:#ea4822;}
+
+.object_new{ overflow:hidden;}
+.object_banner{ width:467px; height:314px; float:left; position:relative; margin-right:22px;}
+.object_banner ul{ width:100%; height:314px; position:relative;}
+.object_banner li{ width:100%; height:314px; background-repeat:no-repeat; background-position:center top; position:absolute; top:0; left:0; background-color:#000; display:none; border-radius:2px;}
+.object_banner li a{ display:block; width:100%; height:100%;}
+.object_banner li.cur{ z-index:1; display:block;}
+.object_banner .nums{ width:142px; height:32px; bottom:0; position:absolute; right:8px; text-align:right; z-index:9; font-size:0;}
+.object_banner .nums a{ display:inline-block; margin:8px 4px 0 0; width:15px; height:15px; background:#707070; line-height:15px; overflow:hidden; border-radius:50%; color:#fff; font-size:12px; text-align:center;}
+.object_banner .nums .cur{ background:#ea4822;}
+.object_banner .mask{ width:100%; height:32px; background:#000; opacity:.7; filter:alpha(opacity=70); position:absolute; left:0; bottom:0; border-radius:0 0 2px 2px;}
+.object_banner p{ padding:0 150px 0 13px; height:32px; font-size:13px; color:#fff; line-height:32px; position:absolute; left:0; bottom:0; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.object_news_ins{ width:441px; float:left;}
+.object_news_ins h4{ font-size:15px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; padding:5px 0 7px;}
+.object_news_ins p{ font-size:13px; height:66px; line-height:22px; color:#7a7a7a; padding-bottom:15px;}
+.object_news_ins li{ overflow:hidden; height:28px; line-height:28px; padding-left:13px; background:url(../images/li_dot.png) no-repeat left center;}
+.object_news_ins li a{ color:#585858;}
+.object_news_ins li .right{ color:#b4b4b4;}
+.object_news_ins li a:hover{ color:#5a9fca; text-decoration:none;}
+
+.object_title{ background:url(../images/object_title.png) repeat-x center; height:30px; margin:10px 0;}
+.object_title span{ font-size:17px; line-height:30px; background:#fff; padding:0 15px 0 5px;}
+
+.object_pic ul{ padding-left:10px; margin-right:-53px; overflow:hidden;}
+.object_pic li{ width:255px; float:left; padding:10px 8px; border:1px solid #e9e9e9; margin:5px 53px 20px 0; background:#fff;}
+.object_pic li img{ display:block; width:100%;}
+.object_pic li h4{ font-size:15px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; padding:5px 0 7px;}
+.object_pic li p{ font-size:13px; color:#585858; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+
+.more{ display:none;}
+
+@media screen and (max-width:540px) {
+	.object{ width:100%; margin:0;}	
+	.object_title{ background:none;}
+	
+	.object_news_ins h4,
+	.object_news_ins p,
+	.object_ins .more{ display:none;}
+	
+	.object_ins{ margin:0; padding:10px;}
+	.object_ins p{ max-height:110px; overflow:hidden;}
+	
+	.banner,
+	.banner ul,
+	.banner li{ height:123px; background-size:auto 100%;}
+	.banner .mask{ height:22px; line-height:22px;}
+	.banner p{ height:22px; line-height:22px; font-size:12px; padding:0; max-width:230px; margin:0 0 0 8px;}
+	.banner .nums{ width:80px; height:22px; top:101px; background-size:110px;}
+	.banner .nums a{ width:8px; height:8px; background-size:8px; margin:7px 4px 0;}
+	.banner .nums a.cur{ background-size:8px;}
+	.banner .leftBtn,
+	.banner .rightBtn{ width:25px; height:70px; background-size:25px 70px; margin-top:0; top:27px;}
+	
+	.object_banner{ width:auto; float:none; margin:0 10px;}
+	.object_banner,
+	.object_banner ul,
+	.object_banner li{height:210px; background-size:auto 100%;}
+	.object_banner .mask{ height:22px; line-height:22px;}
+	.object_banner p{ height:22px; line-height:22px; font-size:12px; padding:0; max-width:200px; margin:0 0 0 8px;}
+	.object_banner .nums{ width:110px; height:22px; background-size:110px; right:0;}
+	.object_banner .nums a{ margin-top:3px;}
+	
+	.object_news_ins{ width:auto; padding:10px; float:none;}
+	.object_news_ins li{ padding-left:8px;}
+	.object_news_ins li .left{ max-width:220px;}
+	
+	.object_pic{ background:#ddd; overflow:hidden;}
+	.object_pic ul{ padding:0 10px; margin:0; background:#ddd;}
+	.object_pic li{ width:42%; margin:0 0 10px 0;}
+	.object_pic li:nth-child(2n){ float:left;}
+	.object_pic li:nth-child(2n+1){ float:right;}
+	
+	.object_title span{ background:none;}
+	
+	.more{ display:block; margin:0 10px; height:22px; text-align:center; border-radius:3px; background:#fff; line-height:22px; font-size:14px; color:#4c4c4c; margin-bottom:10px;}
+}

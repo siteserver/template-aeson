@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>{Stl.SiteName}-{Channel.Title}</title>
+  <link rel="stylesheet" href="{Stl.SiteUrl}/styles/base.css">
+  <link rel="stylesheet" href="{Stl.SiteUrl}/styles/second.css">
+  <style>
+  .newList li .newList_c h3{ padding-bottom:0px;}
+  .newList li{padding: 15px 10px 17px;}
+  </style>
+</head>
+<body>
+<stl:include file="/include/header.html"></stl:include>
+<div class="bannerSecond">
+<stl:channel topLevel="1" type="ImageUrl" width="960" height="154"></stl:channel>
+</div>
+<div class="secondBox">
+  <h2 class="secondTitle"><span>{Channel.Title}</span></h2>
+  <div class="main">
+    <div class="newList">
+      <ul>
+            <stl:pageContents pageNum="7" order="AddDate">
+            <stl:if testType="OddItem">
+                <stl:successTemplate>
+                  <stl:if testType="FileUrl" testOperate="NotEmpty">
+                    <li>
+                        <div class="newList_c">
+                            <h3><a href="{Content.FileUrl}" style="color: #595959;">
+                            <stl:content type="Title" wordNum="22" ellipsis="..."></stl:content></a>
+                            </h3>
+                        </div>
+                    </li>
+                    </stl:if>
+                </stl:successTemplate>
+                <stl:failureTemplate>
+                  <stl:if testType="FileUrl" testOperate="NotEmpty">
+                    <li class="bg">
+                        <div class="newList_c">
+                           <h3><a href="{Content.FileUrl}" style="color: #595959;">
+                           <stl:content type="Title" wordNum="22" ellipsis="..."></stl:content></a>
+                           </h3>
+                        </div>
+                    </li>
+                    </stl:if>
+                </stl:failureTemplate>
+            </stl:if>
+            </stl:pageContents>
+      </ul>
+      <div class="page">
+            <stl:pageItem type="PreviousPage">
+              <stl:successTemplate>
+        <a href="{Current.Url}" class="page_pre"></a>
+                </stl:successTemplate>
+                <stl:failureTemplate>
+                <a href="javascript:void(0);" class="page_pre"></a>
+                </stl:failureTemplate>
+            </stl:pageItem>
+            
+            <stl:pageItem type="PageNavigation" listNum="5">
+               <stl:successTemplate>
+                <a href="{Current.Url}">{Current.Num}</a>
+                </stl:successTemplate>
+                <stl:failureTemplate>
+                  <a href="javascript:void(0);" class="cur">{Current.Num}</a>
+                </stl:failureTemplate>
+            </stl:pageItem>
+            
+            <stl:pageItem type="NextPage">
+                <stl:successTemplate>
+                    <a href="{Current.Url}" class="page_next"></a>
+                </stl:successTemplate>
+                <stl:failureTemplate>
+                  <a href="javascript:void(0);" class="page_next"></a>
+                </stl:failureTemplate>
+            </stl:pageItem>
+        <span>跳转到</span>
+                <stl:pageItem type="PageSelect">
+        <a href="" class="page_go"></a>
+                </stl:pageItem>
+            
+      </div>
+    </div>
+  </div>
+  <stl:include file="/include/right.html"></stl:include>  
+</div>
+<stl:include file="/include/footer.html"></stl:include>
+<script type="text/javascript" src="{Stl.SiteUrl}/scripts/lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="{Stl.SiteUrl}/scripts/page/mobile_nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>{Stl.SiteName}-{Channel.Title}</title>
+  <link rel="stylesheet" href="{Stl.SiteUrl}/styles/base.css">
+  <link rel="stylesheet" href="{Stl.SiteUrl}/styles/second.css">
+  <style>
+  .newList li .newList_c h3{ padding-bottom:0px;}
+  .newList li{padding: 15px 10px 17px;}
+  </style>
+</head>
+<body>
+<stl:include file="/include/header.html"></stl:include>
+<div class="bannerSecond">
+<stl:channel topLevel="1" type="ImageUrl" width="960" height="154"></stl:channel>
+</div>
+<div class="secondBox">
+  <h2 class="secondTitle"><span>{Channel.Title}</span></h2>
+  <div class="main">
+    <div class="newList">
+      <ul>
+            <stl:pageChannels>
+            <stl:if testType="OddItem">
+                <stl:successTemplate>
+                    <li>
+                        <div class="newList_c">
+                            <h3><stl:a style="color: #595959;"><stl:channel type="Title" wordNum="22" ellipsis="..."></stl:channel></stl:a>
+                            </h3>
+                        </div>
+                    </li>
+                </stl:successTemplate>
+                <stl:failureTemplate>
+                    <li class="bg">
+                        <div class="newList_c">
+                           <h3><stl:a style="color: #595959;"><stl:channel type="Title" wordNum="22" ellipsis="..."></stl:channel></stl:a>
+                           </h3>
+                        </div>
+                    </li>
+                </stl:failureTemplate>
+            </stl:if>
+            </stl:pageChannels>
+      </ul>
+      
+    </div>
+  </div>
+  <stl:include file="/include/right.html"></stl:include>  
+</div>
+<stl:include file="/include/footer.html"></stl:include>
+<script type="text/javascript" src="{Stl.SiteUrl}/scripts/lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="{Stl.SiteUrl}/scripts/page/mobile_nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>{Stl.SiteName}-{Channel.Title}</title>
+  <link rel="stylesheet" href="{Stl.SiteUrl}/styles/base.css">
+  <link rel="stylesheet" href="{Stl.SiteUrl}/styles/pic.css">
+</head>
+<body class="">
+<stl:include file="/include/header.html"></stl:include>
+<div class="picBox picContainer">
+  <div class="picCon clearfix">
+    <h2>图片中心</h2>
+    <div class="picNav picTabTitle">
+    </div>
+    <stl:if type="ItemIndex" operate="Equals" value="1">
+        <stl:yes>
+            <div class="pic_wrap picTabCon" style="display:block;">
+              <ul class="pic_aside">
+                    <stl:channels channelIndex="{channel.top2.Title}">
+                    <stl:if testType="UpChannelOrSelf">
+                        <stl:successTemplate>
+                            <li><stl:a class="cur">{Channel.Title}</stl:a></li>
+                        </stl:successTemplate>
+                        <stl:failureTemplate>
+                            <li><stl:a>{Channel.Title}</stl:a></li>
+                        </stl:failureTemplate>
+                    </stl:if>
+                    </stl:channels>
+              </ul>
+              <div class="pic_main">
+                <div class="imgBox imgnav">
+                  <ul class="imgList">
+                    <stl:contents>
+                    <stl:if testType="ItemIndex" testOperate="Equals" testValue="1">
+                        <stl:successTemplate>
+                            <li class="cur" style="display:block;">
+                              <img src="{Content.ImageUrl}">
+                              <div class="mask"></div>
+                              <p><stl:content type="Title" wordNum="30" ellipsis="..."></stl:content></p>
+                            </li>
+                        </stl:successTemplate>
+                      <stl:failureTemplate>
+                            <li style="display:none;">
+                            <img src="{Content.ImageUrl}">
+                             <div class="mask"></div>
+                            <p><stl:content type="Title" wordNum="30" ellipsis="..."></stl:content></p>
+                            </li>
+                        </stl:failureTemplate>
+                        </stl:if>
+                    </stl:contents>
+                  </ul>
+                  <a href="javaScript:void(0)" class="frontBtn front"></a>
+                          <a href="javaScript:void(0)" class="nextBtn next"></a>
+                  <a href="javaScript:void(0)" class="imgclose"></a>
+                </div>
+                <div class="imgthumb cbtn">
+                          <i class="picSildeLeft"><img src="{Stl.SiteUrl}/images/pic_left_s.png"></i>
+                          <i class="picSildeRight"><img src="{Stl.SiteUrl}/images/pic_right_s.png"/></i>
+                          <div class="cSlideUl">
+                              <ul>
+                                <stl:contents>
+                                <stl:if testType="ItemIndex" testOperate="Equals" testValue="1">
+                                <stl:successTemplate>
+                                  <li class="hov"><img src="{Content.ImageUrl}"></li>
+                                </stl:successTemplate>
+                                <stl:failureTemplate>
+                                  <li><img src="{Content.ImageUrl}"></li>
+                                </stl:failureTemplate>
+                                </stl:if>
+                                </stl:contents>
+                              </ul>
+                          </div>
+                       </div>
+              </div>
+            </div>
+        </stl:yes>
+        <stl:no>
+            <div class="pic_wrap picTabCon">
+              <ul class="pic_aside">
+                    <stl:channels channelIndex="{channel.top2.Title}">
+                    <stl:if testType="UpChannelOrSelf">
+                    <stl:successTemplate>
+                <li><stl:a class="cur">{Channel.Title}</stl:a></li>
+                    </stl:successTemplate>
+                    <stl:failureTemplate>
+                      <li><stl:a>{Channel.Title}</stl:a></li>
+                    </stl:failureTemplate>
+                     </stl:if>
+                    </stl:channels>
+              </ul>
+              <div class="pic_main">
+                <div class="imgBox imgnav">
+                  <ul class="imgList">
+                   <stl:contents>
+                   <stl:if testType="ItemIndex" testOperate="Equals" testValue="1">
+                       <stl:successTemplate>
+                           <li class="cur" style="display:block;">
+                              <img src="{Content.ImageUrl}">
+                              <div class="mask"></div>
+                              <p><stl:content type="Title" wordNum="30" ellipsis="..."></stl:content></p>
+                            </li>
+                       </stl:successTemplate>
+                       <stl:failureTemplate>
+                          <li style="display:none;">
+                          <img src="{Content.ImageUrl}">
+                          <div class="mask"></div>
+                          <p><stl:content type="Title" wordNum="30" ellipsis="..."></stl:content></p>
+                          </li>
+                       </stl:failureTemplate>
+                    </stl:if>
+                  </stl:contents>
+                  </ul>
+                  <a href="javaScript:void(0)" class="frontBtn front"></a>
+                          <a href="javaScript:void(0)" class="nextBtn next"></a>
+                  <a href="javaScript:void(0)" class="imgclose"></a>
+                </div>
+                <div class="imgthumb cbtn">
+                          <i class="picSildeLeft"><img src="{Stl.SiteUrl}/images/pic_left_s.png"></i>
+                          <i class="picSildeRight"><img src="{Stl.SiteUrl}/images/pic_right_s.png"/></i>
+                          <div class="cSlideUl">
+                              <ul>
+                                <stl:contents>
+                                <stl:if testType="ItemInex" testOperate="Equals" testValue="1">
+                                <stl:successTemplate>
+                                  <li class="hov"><img src="{Content.ImageUrl}"></li>
+                                </stl:successTemplate>
+                                <stl:failureTemplate>
+                                   <li><img src="{Content.ImageUrl}"></li>
+                                </stl:failureTemplate>
+                                </stl:if>
+                              </stl:contents>
+                              </ul>
+                          </div>
+                       </div>
+              </div>
+            </div>
+        </stl:no>
+    </stl:if>
+    
+  </div>
+</div>
+<div class="mobile_pic picContainer">
+  <div class="mobile_pic_nav picTabTitle">
+    <stl:channels channelIndex="{channel.top2.Title}">
+    <stl:if testType="UpChannelOrSelf">
+    <stl:successTemplate>
+    <stl:a class="cur">{Channel.Title}</stl:a>
+    </stl:successTemplate>
+    <stl:failureTemplate>
+      <stl:a>{Channel.Title}</stl:a>
+    </stl:failureTemplate>
+    </stl:if>
+    </stl:channels>
+  </div>
+  
+  <stl:if type="ItemIndex" operate="Equals" value="1">
+      <stl:yes>
+      <div class="picTabCon" style="display:block;">
+        <stl:contents>
+            <div class="m_big_img">
+              <img src="{Content.ImageUrl}">
+                <div class="mask"></div>
+                <p><stl:content type="Title" wordNum="30" ellipsis="..."></stl:content></p>
+            </div>
+        </stl:contents>
+        
+        
+      </div>
+      </stl:yes>
+      <stl:no>
+      <div class="picTabCon">
+    <stl:contents>
+        <div class="m_big_img">
+          <img src="{Content.ImageUrl}">
+            <div class="mask"></div>
+            <p><stl:content type="Title" wordNum="30" ellipsis="..."></stl:content></p>
+        </div>
+    </stl:contents>
+    
+    
+  </div>
+      </stl:no>
+  </stl:if>
+  
+</div>
+<stl:include file="/include/footer.html"></stl:include>
+<div class="lightBoxmask"></div>
+<script type="text/javascript" src="{Stl.SiteUrl}/scripts/lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="{Stl.SiteUrl}/scripts/page/pic.js"></script>
+<script type="text/javascript" src="{Stl.SiteUrl}/scripts/page/mobile_nav.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,104 @@
+<script type="text/javascript" src="{Stl.SiteUrl}/scripts/lib/jquery-1.11.3.min.js"></script>
+<style>
+    .prodList li img{  height: 230px;}
+    .prodList .prodInsBox .mask{height:230px;}
+    .prodList .prodInsBox p{height:120px; text-align: justify;}
+    .prodList .prodCon h3 a{ font-size:18px; color: #767676;}
+    .ellipsis{font-size:14px;}
+    .header .nav td ul{ width:145px; right:-20px;}
+    .prodList .prodCon h3{text-align:center;}
+    .prod .ins{  width: 535px;margin: 0 auto;text-align: justify;}
+    .indexBox .news p:hover{color:#F78540;}
+    .indexBox .news h4:hover{color:#F78540;}
+    .indexBox .words .ceoWords a{color:#858585;}
+    .indexBox .words .ceoWords a:hover{color:#F78540;}
+
+  </style>
+<div class="topBar">
+	<div class="w960">
+		<span class="left">
+			<strong> 北京迅驰汽车用品有限公司</strong>
+			<em></em>
+			<strong class="eName">Beijing chen'en Xingye Technology Co. Ltd</strong>
+		</span>
+		<span class="right">
+			<a href="http://t.qq.com/siteserver2011" target="_blank" class="weibo">微博</a>
+			<em></em>
+			<stl:a class="phone" channelIndex="联系我们">联系我们</stl:a>
+		</span>
+	</div>
+</div>	
+<div class="header headerIndex">
+	<h1 class="logo">
+    <a href="{stl.siteurl}/"><stl:value type="Logo"><img src="{Content.ImageUrl}" width="168" height="82"></stl:value></a></h1>
+	
+    <div class="nav" id="nav">
+		<table cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td>
+                <stl:if testType="ChannelName" testOperate="Equals" testValue="首页">
+                    <stl:successTemplate>
+                    <a href="{stl.siteurl}/" class="index cur">首页</a>
+                    </stl:successTemplate>
+                    <stl:failureTemplate>
+                    <a href="{stl.siteurl}/" class="index">首页</a>
+                    </stl:failureTemplate>
+                </stl:if>
+				</td>
+                
+                <stl:channels channelIndex="首页" groupChannel="导航">
+				<td>
+					<div>
+                    <stl:if testType="UpChannelOrSelf">
+                        <stl:successTemplate>
+                        	<stl:a class="cur">{Channel.Title}</stl:a>
+                        </stl:successTemplate>
+                        <stl:failureTemplate>
+							<stl:a>{Channel.Title}</stl:a>
+                        </stl:failureTemplate>
+                    </stl:if>
+                    <stl:if type="ChannelName" operate="Equals" value="展会活动">
+                        <stl:yes>
+                        </stl:yes>
+                        <stl:no>
+                        <ul>
+                        <stl:channels>
+							<li><stl:a>{Channel.Title}</stl:a></li>
+                        </stl:channels>
+                        </ul>
+                        </stl:no>
+                     </stl:if>
+					</div>
+				</td>
+                </stl:channels>
+			</tr>
+		</table>	
+	</div>
+    
+	<a href="javascript:void(0)" class="mobile_menu"></a>
+    <!--手机版 begin-->
+		<ul class="mobile_nav">     
+		<li><a href="{stl.siteurl}/">首页</a></li>
+        <stl:channels channelIndex="首页" groupChannel="导航">
+        <stl:if type="ChannelName" operate="Equals" value="展会活动">
+            <stl:yes>
+            <li>
+               <stl:a href="javascript:void(0);" class="mobile_nav_t">{Channel.Title}</stl:a>
+            </li>
+            </stl:yes>
+            <stl:no>
+            <li>
+                 <stl:a href="javascript:void(0);" class="mobile_nav_t">{Channel.Title}</stl:a>
+                <i></i>
+                <ol>
+                <stl:channels>
+                    <li><stl:a>{Channel.Title}</stl:a></li>
+                </stl:channels>
+                </ol>
+            </li>
+            </stl:no>
+        </stl:if>
+        </stl:channels>
+	</ul>
+    <!--手机版 end-->
+</div>

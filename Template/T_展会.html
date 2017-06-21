@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>{Stl.SiteName}-{Channel.Title}</title>
+  <link rel="stylesheet" href="{Stl.SiteUrl}/styles/base.css">
+  <link rel="stylesheet" href="{Stl.SiteUrl}/styles/subject.css">
+</head>
+<body>  
+<stl:include file="/include/header.html"></stl:include>
+<div class="object">
+  <div class="banner">
+    <ul>
+        <stl:contents channelIndex="展会轮播图" isImage="true">
+           <stl:if testType="ItemIndex" testOperate="Equals" testValue="1">
+            <stl:successTemplate>
+              <li class="cur" style="background-image:url({Content.ImageUrl});">
+                <stl:a>
+        <div class="mask"></div>
+        <p><stl:content type="Title" wordNum="35" ellipsis="..."></stl:content></p>
+                  </stl:a>
+        </li>
+            </stl:successTemplate>
+            <stl:failureTemplate>
+              <li style="background-image:url({Content.ImageUrl});">
+                <stl:a>
+        <div class="mask"></div>
+        <p><stl:content type="Title" wordNum="35" ellipsis="..."></stl:content></p>
+                  </stl:a>
+        </li>
+            </stl:failureTemplate>
+          </stl:if>
+      </stl:contents>
+    </ul>
+    <div class="nums">
+        <stl:contents channelIndex="展会轮播图" isImage="true">
+          <stl:if testType="ItemIndex" testOperate="Equals" testValue="1">
+            <stl:successTemplate>
+              <a class="cur" href="javascript:void(0);">{Content.ItemIndex}</a>
+            </stl:successTemplate>
+            <stl:failureTemplate>
+              <a href="javascript:void(0);">{Content.ItemIndex}</a>
+            </stl:failureTemplate>
+          </stl:if>
+      </stl:contents>
+    </div>
+    <a href="javascript:void(0);" class="leftBtn"></a>
+    <a href="javascript:void(0);" class="rightBtn"></a>
+  </div>
+  
+  <div class="object_ins">
+    <h3>展会介绍</h3>
+        <stl:contents channelIndex="展会介绍" totalNum="1">
+    <p><stl:content type="Summary" wordNum="160" ellipsis="..."></stl:content></p>
+    <div class="more">
+      <stl:a>详细&gt;&gt;</stl:a>
+    </div>
+        </stl:contents>
+  </div>
+  
+  <div class="object_new">
+    <h3 class="object_title"><span><stl:a channelIndex="展会信息" target="_blank" style="color: #585858;">展会信息</stl:a></span></h3>
+    <div class="object_banner">
+      <ul>
+          <stl:contents channelIndex="展会信息" isRecommend="false"  isImage="true" totalNum="5">
+            <stl:if testType="ItemIndex" testOperate="Equals" testValue="1">
+            <stl:successTemplate>
+                <li class="cur" style="background-image:url({Content.ImageUrl});">
+                <stl:a>
+                  <div class="mask"></div>
+                  <p><stl:content type="Title" wordNum="28" ellipsis="..."></stl:content></p>  
+                </stl:a>
+                </li>
+            </stl:successTemplate>
+            <stl:failureTemplate>
+             <li style="background-image:url({Content.ImageUrl});">
+                <stl:a>
+                  <div class="mask"></div>
+                  <p><stl:content type="Title" wordNum="28" ellipsis="..."></stl:content></p>  
+                </stl:a>
+                </li>
+            </stl:failureTemplate>
+            </stl:if>
+          </stl:contents>
+      </ul>
+      <div class="nums">
+      <stl:contents channelIndex="展会信息" isImage="true" totalNum="5">
+      <stl:if testType="ItemIndex" testOperate="Equals" testValue="1">
+      <stl:successTemplate>
+        <a class="cur" href="javascript:void(0);">{Content.ItemIndex}</a>
+      </stl:successTemplate>
+      <stl:failureTemplate>
+       <a href="javascript:void(0);">{Content.ItemIndex}</a>
+      </stl:failureTemplate>
+      </stl:if>
+       </stl:contents>
+      </div>
+    </div>
+    <div class="object_news_ins">
+        <stl:contents channelIndex="展会信息" isTop="true" totalNum="1" order="AddDate" >
+      <h4><stl:a style="color:#585858; text-decoration:none;"><stl:content type="Title" wordNum="24" ellipsis="..."></stl:content></stl:a></h4>
+      <p><stl:a style="color: #585858;"><stl:content type="Summary" wordNum="80"></stl:content></stl:a></p>
+        </stl:contents>
+      <ul class="news_list">
+            <stl:contents channelIndex="展会信息" isTop="false" totalNum="7" order="AddDate">
+        <li>
+          <span class="left"><stl:a><stl:content type="Title" wordNum="25" ellipsis="..."></stl:content></stl:a></span>
+          <span class="right"><stl:content type="AddDate" formatString="yyyy-MM-dd"></stl:content></span>
+        </li>
+            </stl:contents>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="object_pic">
+    <h3 class="object_title"><span><stl:a channelIndex="展会图片" target="_blank" style="color: #585858;">展会图片</stl:a></span></h3>
+    <ul class="clearfix">
+        <stl:contents channelIndex="展会图片" isImage="true" totalNum="6" order="AddDate">
+      <li>
+        <stl:a><img src="{Content.ImageUrl}" width="255" height="145"></stl:a>
+        <h4><stl:a style="color: #585858;"><stl:content type="Title" wordNum="12" ellipsis=""></stl:content></stl:a></h4>
+        <p><stl:a style="color: #585858;"><stl:content type="Source"></stl:content> / <stl:content type="Author"></stl:content></stl:a></p> 
+      </li>  
+    </stl:contents>    
+    </ul>
+  </div>
+
+</div>
+
+<stl:include file="/include/footer.html"></stl:include>
+<script type="text/javascript" src="{Stl.SiteUrl}/scripts/lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="{Stl.SiteUrl}/scripts/page/banner.js"></script>
+<script type="text/javascript" src="{Stl.SiteUrl}/scripts/page/object_banner.js"></script>
+<script type="text/javascript" src="{Stl.SiteUrl}/scripts/page/mobile_nav.js"></script>
+</body>
+</html>
+
